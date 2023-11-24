@@ -21,7 +21,7 @@ The source code for the different topics is provided as branches
 in this repository. The table below shows which topics are
 shown in which branch.
 
-| Branch    | Topics                                                    |
-| --------- | --------------------------------------------------------- |
-| `step-01` | Initial implementation of the Game of Life                |
-| `step-02` | Setting up a folder structure and implementing unit tests |
+| Branch                                                                  | Topics                                                    |
+| ----------------------------------------------------------------------- | --------------------------------------------------------- |
+| `[step-01](https://github.com/ceedee666/game-of-software/tree/step-01)` | Initial implementation of the Game of Life                |
+| `[step-02](https://github.com/ceedee666/game-of-software/tree/step-02)` | Setting up a folder structure and implementing unit tests |

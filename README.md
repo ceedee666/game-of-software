@@ -10,7 +10,18 @@ Starting from a basic implementation of
 the following aspects will be shown:
 
 - Folder structure for python projects
-- Pythonic code
 - Unit tests
+- Pythonic code
 - Useful Python standard libraries
 - Object oriented vs. functional programming
+
+## Organisation
+
+The source code for the different topics is provided as branches
+in this repository. The table below shows which topics are
+shown in which branch.
+
+| Branch    | Topics                                                    |
+| --------- | --------------------------------------------------------- |
+| `step-01` | Initial implementation of the Game of Life                |
+| `step-02` | Setting up a folder structure and implementing unit tests |

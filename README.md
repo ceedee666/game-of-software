@@ -25,3 +25,7 @@ shown in which branch.
 | --------------------------------------------------------------------- | --------------------------------------------------------- |
 | [step-01](https://github.com/ceedee666/game-of-software/tree/step-01) | Initial implementation of the Game of Life                |
 | [step-02](https://github.com/ceedee666/game-of-software/tree/step-02) | Setting up a folder structure and implementing unit tests |
+|                                                                       | Adding import for initial setup                           |
+|                                                                       | Adding a nice CLI                                         |
+|                                                                       | Seperate functionality into classes                       |
+|                                                                       | Simplyfy logic using Python standard library              |

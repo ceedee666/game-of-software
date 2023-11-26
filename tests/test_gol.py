@@ -44,6 +44,26 @@ class TestGol(unittest.TestCase):
             "The cell at Pos (0,1) should have 5 neighbors.",
         )
 
+    def test_init_with_pattern(self):
+        self.width = 10
+        self.hight = 10
+
+        self.g = gol.init_grid(self.width, self.hight)
+        self.g = gol.init_with_pattern("glider", self.g)
+        self.assertEqual(
+            sum([sum(line) for line in self.g]),
+            5,
+            "After initializing the glider, there should be 5 alive cells.",
+        )
+
+        self.g = gol.init_grid(self.width, self.hight)
+        self.g = gol.init_with_pattern("eight", self.g)
+        self.assertEqual(
+            sum([sum(line) for line in self.g]),
+            12,
+            "After initializing the eight, there should be 12 alive cells.",
+        )
+
     def test_next_generation(self):
         # Test one cell
         self.g[0][0] = True

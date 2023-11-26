@@ -3,6 +3,17 @@ import random
 from curses import wrapper
 from time import sleep
 
+GLIDER = [[0, 1, 0], [0, 0, 1], [1, 1, 1]]
+
+EIGHT = [
+    [1, 1, 0, 0, 0, 0],
+    [1, 1, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 1, 1],
+    [0, 0, 0, 0, 1, 1],
+]
+
 
 def init_grid(width, height):
     grid = []
@@ -33,6 +44,21 @@ def neighbours(x, y, grid):
     return neighbours
 
 
+def init_pattern(name, grid, start_x=1, start_y=1):
+    if name == "glider":
+        for y in range(len(GLIDER)):
+            for x in range(len(GLIDER[0])):
+                if GLIDER[y][x] == 1:
+                    grid[start_y + y][start_x + x] = True
+    if name == "eight":
+        for y in range(len(EIGHT)):
+            for x in range(len(EIGHT[0])):
+                if EIGHT[y][x] == 1:
+                    grid[start_y + y][start_x + x] = True
+
+    return grid
+
+
 def next_generation(grid):
     new_grid = init_grid(len(grid[0]), len(grid))
     for x in range(len(grid[0])):
@@ -53,7 +79,9 @@ def next_generation(grid):
 
 def main_window(stdscr):
     grid = init_grid(curses.COLS - 2, curses.LINES - 3)
-    grid = randomize(grid)
+    # grid = randomize(grid)
+    grid = init_pattern("eight", grid, 5, 5)
+    grid = init_pattern("glider", grid, 25, 5)
 
     generation = 0
     while True:

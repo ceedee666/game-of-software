@@ -44,7 +44,7 @@ def neighbours(x, y, grid):
     return neighbours
 
 
-def init_pattern(name, grid, start_x=1, start_y=1):
+def init_with_pattern(name, grid, start_x=1, start_y=1):
     if name == "glider":
         for y in range(len(GLIDER)):
             for x in range(len(GLIDER[0])):
@@ -80,8 +80,8 @@ def next_generation(grid):
 def main_window(stdscr):
     grid = init_grid(curses.COLS - 2, curses.LINES - 3)
     # grid = randomize(grid)
-    grid = init_pattern("eight", grid, 5, 5)
-    grid = init_pattern("glider", grid, 25, 5)
+    grid = init_with_pattern("eight", grid, 5, 5)
+    grid = init_with_pattern("glider", grid, 25, 5)
 
     generation = 0
     while True:
